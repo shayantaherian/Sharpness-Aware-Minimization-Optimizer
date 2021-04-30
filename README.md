@@ -8,4 +8,31 @@ Generalization
 <img src="https://user-images.githubusercontent.com/51369142/116109471-b79c6d80-a6ac-11eb-899d-c98169f5ab49.PNG" width="500" height="200">
  </p>
  
+ ## Training
+ To train the classifier, first clone the repository 
  
+ `
+git clone https://github.com/shayantaherian/Sharpness-Aware-Minimization-Optimizer/.git
+`
+ 
+ Then run the classifier 
+ 
+ `training.py ` 
+ 
+To test the trained model, run
+
+`accuracy_test`
+
+## Result test accuracy (CIFAR-10)
+
+| Optimizer | Accuracy 
+| :---         |     ---:      | 
+| SAM   | 84 %     | 
+| SGD     | 80 %       | 
+| Adam   |      69 %  |
+
+It is noted that in this implementation, Resnet-18 has been chosen as a pre-trained model. However to improve the accuracy, more sophisticate model is needed.
+
+## References
+1. [A PyTorch implementation of Sharpness-Aware Minimization for Efficiently Improving Generalization](https://github.com/moskomule/sam.pytorch)
+2. [SAM: Sharpness-Aware Minimization for Efficiently Improving Generalization](https://github.com/google-research/sam)
